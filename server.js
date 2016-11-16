@@ -10,19 +10,35 @@ var koaBody = require('koa-body')(
         multipart:  true,
         patchNode:  true,
         patchKoa:  true,
-        formLimit:  '20mb'
+        formLimit:  '20mb',
+        formidable: {
+            uploadDir: __dirname,
+            keepExtensions: true,
+            maxFieldsSize: '20mb'
+        //     // onFileBegin: function(name, file){
+        //     //     console.log("haga");
+        //     //     fs.readFile(name, function(data){
+        //     //         if(data.err){
+        //     //             var stream = fs.createWriteStream(name);
+        //     //             stream.end(file, 'utf-8');
+        //     //         }
+        //     //     })
+            // }
+        }
     }
 );
+
+process.env.NODE_DEBUG = 'fs';
+
+
+
+var upload = require('./controllers/upload');
 
 var app = koa();
 app.use(logger());
 
 router
-    .post('/upload', koaBody, function * (next){
-        var file = this.request.body.file, type = this.request.body.type;
-        
-
-    })
+    .post('/upload', koaBody, upload); 
 
 app.use(router.routes())
 app.use(router.allowedMethods());

@@ -11,6 +11,7 @@ $(function(){
             $.ajax({
                 url:  '/upload',
                 type:  'POST',
+                contentType: false,
                 data:  data,
                 processData:  false,
                 success:  function(){
