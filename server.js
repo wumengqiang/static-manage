@@ -10,11 +10,11 @@ var koaBody = require('koa-body')(
         multipart:  true,
         patchNode:  true,
         patchKoa:  true,
-        formLimit:  '20mb',
+        formLimit:  '3mb',
         formidable: {
             uploadDir: __dirname,
             keepExtensions: true,
-            maxFieldsSize: '20mb'
+            maxFieldsSize: '3mb'
         //     // onFileBegin: function(name, file){
         //     //     console.log("haga");
         //     //     fs.readFile(name, function(data){
