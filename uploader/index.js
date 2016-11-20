@@ -23,6 +23,7 @@ $(function(){
             data.append('file', file);
             data.append('type', type);
             data.append('phone', phone);
+            $('.upload-wrapper').text('上传中...');
             $.ajax({
                 url:  '/upload',
                 type:  'POST',
@@ -30,6 +31,7 @@ $(function(){
                 data:  data,
                 processData:  false,
                 success:  function(data){
+                    $('.upload-wrapper').text('文件上传');
                     var url = data.url;
                     $('.copy-url').attr('data-clipboard-text', url).removeClass('hidden');
                     console.log('success');
@@ -37,6 +39,7 @@ $(function(){
                 error:  function(data){
                     console.log('error');
                     $('.copy-url').addClass('hidden');
+                    $('.upload-wrapper').text('文件上传');                    
                 }
             })
     })

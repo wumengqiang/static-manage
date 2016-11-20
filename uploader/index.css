@@ -60,11 +60,22 @@ input[type='file']::-webkit-file-upload-button {
 
 .copy-url{
     position: absolute;
+    border: 1px solid #e5e5e5;
+    top:60%;
     left: 0;
     right: 0;
-    top: 50%;
-    margin: 0 auto;
+    height: 60px;
     width: 200px;
+    margin: 0 auto;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    color: #444;
+}
+
+.copy-url:hover{
+    box-shadow: 0 2px 5px 0px #ccc;
 }
 
 .upload-wrapper{
