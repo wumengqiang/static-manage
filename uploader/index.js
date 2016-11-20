@@ -1,5 +1,14 @@
 $(function(){
-    document.querySelector('#button-submit').addEventListener('click', function(){
+
+    new Clipboard('.copy-url');
+    document.querySelector('.upload-wrapper').addEventListener('click', function(event){
+        $("#file").click();
+    })
+
+    document.querySelector('#file').addEventListener('change', function(event){
+        if(event.target.files.length === 0){
+            return;
+        }
         var file = $('#file')[0].files[0], type =  $('#type').val();
         if(! file || ! type){
             alert('表单内容不能为空');
@@ -20,11 +29,14 @@ $(function(){
                 contentType: false,
                 data:  data,
                 processData:  false,
-                success:  function(){
+                success:  function(data){
+                    var url = data.url;
+                    $('.copy-url').attr('data-clipboard-text', url).removeClass('hidden');
                     console.log('success');
                 },
-                error:  function(){
+                error:  function(data){
                     console.log('error');
+                    $('.copy-url').addClass('hidden');
                 }
             })
     })

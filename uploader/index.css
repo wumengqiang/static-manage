@@ -1,0 +1,95 @@
+html,
+body{
+    height: 100%;
+    width: 100%;
+    /*background-color: #1B1B1B;*/
+    font-family: -apple-system, /* OSX ^10.11 & iOS ^9 San Francisco & 苹方 */
+
+    /* English First */ 
+
+    "Helvetica Neue", /* OSX */ 
+    Roboto,  /* Android 4.0以上 */
+    "Droid Sans", /* Android 4.0以下 */
+    "Arial", /* Win */ 
+    "Helvetica", 
+    "Segoe UI", /* Win ^8 */
+
+    /* Chinese Fallback */ 
+    "PingFang SC", /* OSX ^10.11 & iOS ^9 苹方（华康信凭黑） */ 
+    "Hiragino Sans GB", /* OSX ^10.6 冬青黑体 */ 
+    "STHeiti", /* OSX <10.6 & iOS <9 华文黑体 */ 
+    "Heiti SC",
+    "Microsoft YaHei", /* Win 微软雅黑 */ 
+    "Microsoft JhengHei", /* Win 微软正黑 */ 
+    "Source Han Sans SC", /* SourceHan - begin 思源黑体 */ 
+    "Noto Sans CJK SC", 
+    "Source Han Sans CN", 
+    "Noto Sans SC", 
+    "Source Han Sans TC", 
+    "Noto Sans CJK TC", /* SourceHan - end */ 
+    "Microsoft Yahei",
+    "微软雅黑",
+    sans-serif; /* System Fallback */
+}
+
+input[type='file']{
+    color: transparent;
+	cursor:pointer;
+}
+
+input[type='file']::-webkit-file-upload-button {
+	cursor:pointer;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.transparent{
+    opacity: 0 !important;
+}
+
+.form-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40%;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.copy-url{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.upload-wrapper{
+    position: relative;
+    border: 1px solid #e5e5e5;
+    height: 60px;
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    color: #444;
+}
+
+.upload-wrapper:hover{
+    box-shadow: 0 2px 5px 0px #ccc;
+}
+
+/*#file {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}*/
+

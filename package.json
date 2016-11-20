@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "clipboard": "^1.5.15",
     "co-fs": "^1.2.0",
     "imagemin": "^5.2.2",
     "imagemin-mozjpeg": "^6.0.0",
